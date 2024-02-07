@@ -1,16 +1,18 @@
-<!-- ## rk begin -->
 ---
+//## rk begin
 export interface Props {
+  enabled: string,
   publisherId: string,
   localTest: string
 }
 
-const { publisherId = '' } = Astro.props
-const { localTest = 'off' }   = Astro.props
+const { enabled = 'no'}         = Astro.props
+const { publisherId = '' }      = Astro.props
+const { localTest = 'off' }     = Astro.props
 ---
 
 {
-  publisherId && (
+  enabled === 'yes' && publisherId && (
     <>
     <script
       async

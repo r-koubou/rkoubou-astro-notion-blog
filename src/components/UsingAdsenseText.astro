@@ -1,0 +1,19 @@
+---
+//## rk begin
+export interface Props {
+  enabled: string
+}
+
+const { enabled = 'no' } = Astro.props
+---
+
+{
+  enabled === 'yes' && (
+    <>
+    <div style="padding-top: 0.5em; padding-bottom: 1.5em;">
+      <span style="font-size: 10px;">当サイトではアフィリエイト広告を利用しています</span>
+    </div>
+    </>
+  )
+}
+<!-- ## rk end -->

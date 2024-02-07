@@ -27,7 +27,7 @@ import BlogTagsLink from '../../components/BlogTagsLink.astro'
 import styles from '../../styles/blog.module.css'
 
 // ## rk begin
-import { GOOGLEADS_PUBLISHER_ID, GOOGLEADS_LOCAL_TEST } from '../../server-constants.ts'
+import { ADSENSE_ENABLED, GOOGLEADS_PUBLISHER_ID, GOOGLEADS_LOCAL_TEST } from '../../server-constants.ts'
 import GoogleAdsense from '../../components/GoogleAdsense.astro'
 // ## rk end
 
@@ -113,7 +113,7 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
       <PostTags post={post} />
 
       <!-- ## rk begin -->
-      <GoogleAdsense publisherId={GOOGLEADS_PUBLISHER_ID} localTest={GOOGLEADS_LOCAL_TEST} />
+      <GoogleAdsense enabled={ADSENSE_ENABLED} publisherId={GOOGLEADS_PUBLISHER_ID} localTest={GOOGLEADS_LOCAL_TEST} />
       <!-- ## rk end -->
 
       <footer>

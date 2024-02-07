@@ -128,6 +128,11 @@ if (database.Icon && database.Icon.Type === 'file') {
               <div class="description">
                 {database.Description}
               </div>
+              <!-- ## rk begin -->
+              <div class="ads-notice">
+                <UsingAdsenseText enabled={ADSENSE_ENABLED} />
+              </div>
+              <!-- ## rk end -->
             </header>
 
             <slot name="main" />
@@ -144,7 +149,6 @@ if (database.Icon && database.Icon.Type === 'file') {
         </main>
 
         <aside>
-          <UsingAdsenseText enabled={ADSENSE_ENABLED} />
           <SearchButton />
           <slot name="aside" />
         </aside>
@@ -442,4 +446,9 @@ if (database.Icon && database.Icon.Type === 'file') {
     display: inline-block;
     min-height: 0.9rem;
   }
+  /*## rk begin*/
+  div.ads-notice {
+    padding-bottom: 1em;
+  }
+  /*## rk end*/
 </style>

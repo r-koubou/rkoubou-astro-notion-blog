@@ -1,0 +1,17 @@
+---
+export interface Props {
+  url: string
+}
+
+const { url = '' } = Astro.props
+---
+
+{
+  url && (
+    <>
+      <div style="padding-bottom: 8pt;">
+        <a href={`${url}`}>🏠 Main Site</a>
+      </div>
+    </>
+  )
+}

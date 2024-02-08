@@ -17,6 +17,7 @@ export const REQUEST_TIMEOUT_MS = parseInt(
 export const ENABLE_LIGHTBOX = import.meta.env.ENABLE_LIGHTBOX
 
 //## rk begin
+export const MAINSITE_URL           = import.meta.env.MAINSITE_URL || process.env.MAINSITE_URL || ''
 export const ADSENSE_ENABLED        = process.env.ADSENSE_ENABLED || import.meta.env.ADSENSE_ENABLED || 'no'
 export const GOOGLEADS_PUBLISHER_ID = process.env.GOOGLEADS_PUBLISHER_ID || import.meta.env.GOOGLEADS_PUBLISHER_ID || ''
 export const GOOGLEADS_LOCAL_TEST   = import.meta.env.GOOGLEADS_LOCAL_TEST || 'off'

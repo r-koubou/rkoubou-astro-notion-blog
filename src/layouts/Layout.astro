@@ -195,16 +195,44 @@ if (database.Icon && database.Icon.Type === 'file') {
     }
   }
 
+  /* ## rk begin */
+  /* see also: https://suzu-mono-gram.com/blog/astro-notion-blog-sidebar/ */
   aside {
     order: 1;
     width: 300px;
     padding: 20px 20px;
     background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        display: block;
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #0000004d;
+      }
+      &::-webkit-scrollbar-track {
+        background: #0000001a;
+      }
+    }
   }
+  /* ## rk end */
+
   @media (max-width: 640px) {
     aside {
       order: 2;
       width: 100%;
+      /* ## rk begin */
+      height: 100%;
+      overflow-y: hidden;
+      /* ## rk end */
     }
   }
 
